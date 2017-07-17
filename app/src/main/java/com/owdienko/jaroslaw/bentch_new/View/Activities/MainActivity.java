@@ -1,4 +1,4 @@
-package com.owdienko.jaroslaw.bentch_new.View;
+package com.owdienko.jaroslaw.bentch_new.View.Activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.owdienko.jaroslaw.bentch_new.View;
+package com.owdienko.jaroslaw.bentch_new.View.Activities;
 
 /**
  * Created by Iaroslav Ovdienko on 17.07.17.
