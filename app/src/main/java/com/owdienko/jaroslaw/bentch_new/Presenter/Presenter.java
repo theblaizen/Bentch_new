@@ -6,4 +6,13 @@ package com.owdienko.jaroslaw.bentch_new.Presenter;
  */
 
 public interface Presenter {
+
+    void onCreate();
+
+    void onPause();
+
+    void onResume();
+
+    void onDestroy();
+
 }

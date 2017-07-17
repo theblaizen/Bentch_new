@@ -6,4 +6,7 @@ package com.owdienko.jaroslaw.bentch_new.View;
  */
 
 public interface MainActivityView {
+
+ void setUpToolBar();
+
 }
