@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        setUpToolBar();
         presenter = new MainActivityPresenter(getApplication(), this);
         presenter.onCreate();
     }
