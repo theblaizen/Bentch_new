@@ -1,7 +1,9 @@
-package com.owdienko.jaroslaw.bentch_new;
+package com.owdienko.jaroslaw.bentch_new.View;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.owdienko.jaroslaw.bentch_new.R;
 
 public class MainActivity extends AppCompatActivity {
 
