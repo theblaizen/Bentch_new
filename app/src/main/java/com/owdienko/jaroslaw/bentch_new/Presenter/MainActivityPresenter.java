@@ -1,43 +1,18 @@
 package com.owdienko.jaroslaw.bentch_new.Presenter;
 
-import android.content.Context;
-
-import com.owdienko.jaroslaw.bentch_new.View.Activities.MainActivityView;
-
 /**
  * Created by Iaroslav Ovdienko on 17.07.17.
  * - jaroslaw - 2017 -
  */
 
-public class MainActivityPresenter implements Presenter {
-    MainActivityView view;
-    private Context context;
+public interface MainActivityPresenter {
 
-    public MainActivityPresenter(Context context, MainActivityView view) {
-        this.context = context;
-        this.view = view;
-    }
+    void onCreate();
 
-    @Override
-    public void onCreate() {
+    void onPause();
 
-        view.setUpToolBar();
+    void onResume();
 
-    }
-
-    @Override
-    public void onPause() {
-
-    }
-
-    @Override
-    public void onResume() {
-
-    }
-
-    @Override
-    public void onDestroy() {
-
-    }
+    void onDestroy();
 
 }

@@ -7,6 +7,8 @@ package com.owdienko.jaroslaw.bentch_new.View.Activities;
 
 public interface MainActivityView {
 
- void setUpToolBar();
+    void setupToolBar();
+
+    void setupViewPager();
 
 }
