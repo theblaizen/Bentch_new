@@ -6,4 +6,5 @@ package com.owdienko.jaroslaw.bentch_new.Model;
  */
 
 public interface MainActivityInteractor {
+
 }

@@ -2,6 +2,8 @@ package com.owdienko.jaroslaw.bentch_new.Presenter;
 
 import android.content.Context;
 
+import com.owdienko.jaroslaw.bentch_new.Model.MainActivityInteractor;
+import com.owdienko.jaroslaw.bentch_new.Model.MainActivityInteractorImpl;
 import com.owdienko.jaroslaw.bentch_new.View.Activities.MainActivityView;
 
 /**
@@ -10,12 +12,14 @@ import com.owdienko.jaroslaw.bentch_new.View.Activities.MainActivityView;
  */
 
 public class MainActivityPresenterImpl implements MainActivityPresenter {
-    MainActivityView view;
+    private MainActivityView view;
     private Context context;
+    private MainActivityInteractor interactor;
 
     public MainActivityPresenterImpl(Context context, MainActivityView view) {
         this.context = context;
         this.view = view;
+        this.interactor = new MainActivityInteractorImpl();
     }
 
     @Override

@@ -5,5 +5,6 @@ package com.owdienko.jaroslaw.bentch_new.Model;
  * - jaroslaw - 2017 -
  */
 
-public class MainActivityInteractorImpl {
+public class MainActivityInteractorImpl implements MainActivityInteractor {
+
 }
