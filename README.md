@@ -1,5 +1,5 @@
 # Bentch_new(Bentch)
-
+**Task List:**
 1) 200x200 dp image holder with progress bar(on top) and label(on bottom).
 2) editor for photos(crop, `scale?`, load).
 3) editor for sound(crop, load).
