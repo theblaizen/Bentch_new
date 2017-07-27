@@ -11,4 +11,4 @@
 9) settings: change background of the application screens, grid size(min: 3, max: 5), version, about dev team.
 10) edit mode for delete/change sound or image or label.
 
-***if list item marked ' * ', this means that it's done.
+*** if list item marked ' * ', this means that it's done. ***
