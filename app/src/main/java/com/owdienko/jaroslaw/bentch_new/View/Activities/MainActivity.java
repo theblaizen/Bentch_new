@@ -1,11 +1,12 @@
 package com.owdienko.jaroslaw.bentch_new.View.Activities;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.owdienko.jaroslaw.bentch_new.Adapters.TabsViewPagerAdapter;
 import com.owdienko.jaroslaw.bentch_new.Presenter.MainActivityPresenterImpl;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
     @Override
     protected void onResume() {
         super.onResume();
+        invalidateOptionsMenu();
         presenter.onResume();
     }
 
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
 
     @Override
     public void setupToolBar() {
-        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorMainTextWhite));
         toolbar.setTitle(R.string.app_name);
         setSupportActionBar(toolbar);
     }
@@ -75,8 +77,17 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
         adapter.addFragment(new EditPageFragment(), "Editor");
 
         viewPager.setAdapter(adapter);
-        viewPager.setOffscreenPageLimit(4);
+//        viewPager.setOffscreenPageLimit(4);
         tabLayout.setupWithViewPager(viewPager);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
 }

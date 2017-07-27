@@ -1,5 +1,8 @@
 package com.owdienko.jaroslaw.bentch_new.Presenter;
 
+import com.owdienko.jaroslaw.bentch_new.Adapters.RecyclerViewResources;
+import com.owdienko.jaroslaw.bentch_new.Model.Entities.ImageEntity;
+import com.owdienko.jaroslaw.bentch_new.Model.Entities.SoundEntity;
 import com.owdienko.jaroslaw.bentch_new.Model.MainPageFragmentInteractor;
 import com.owdienko.jaroslaw.bentch_new.View.Fragments.MainPageFragmentView;
 
@@ -12,10 +15,18 @@ public class MainPageFragmentPresenterImpl implements MainPageFragmentPresenter,
 
     private MainPageFragmentInteractor interactor;
     private MainPageFragmentView view;
+    private RecyclerViewResources adapterView;
 
+    //TODO pass adapter from MainPageFragment
     public MainPageFragmentPresenterImpl(MainPageFragmentView view, MainPageFragmentInteractor interactor) {
         this.interactor = interactor;
         this.view = view;
+    }
+
+    @Override
+    public void onLoadResources(ImageEntity imageEntity, SoundEntity soundEntity) {
+        adapterView.setImages(imageEntity);
+        adapterView.setSounds(soundEntity);
     }
 
     @Override
@@ -35,6 +46,5 @@ public class MainPageFragmentPresenterImpl implements MainPageFragmentPresenter,
     @Override
     public void onFinished(String item) {
         view.hideProgress();
-        view.setupTextView(item);
     }
 }

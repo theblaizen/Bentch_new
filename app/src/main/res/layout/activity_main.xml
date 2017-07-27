@@ -33,14 +33,14 @@
         android:id="@+id/tablayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray"
+        android:background="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:tabGravity="fill"
-        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorColor="@color/colorAccent"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@android:color/background_light"
-        app:tabTextColor="@android:color/background_light" />
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextColor="@color/colorMainTextWhite" />
 </android.support.constraint.ConstraintLayout>

@@ -10,6 +10,4 @@ public interface MainPageFragmentView {
     void showProgress();
 
     void hideProgress();
-
-    void setupTextView(String text);
 }

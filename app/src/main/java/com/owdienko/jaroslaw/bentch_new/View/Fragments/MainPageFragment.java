@@ -35,7 +35,7 @@ public class MainPageFragment extends Fragment implements MainPageFragmentView {
         View view = inflater.inflate(R.layout.fragment_main_page, container, false);
 
         progressBar = view.findViewById(R.id.mainFragmentProgressBar);
-        textView = view.findViewById(R.id.textView);
+        textView = view.findViewById(R.id.noItemsInList);
 
         presenter = new MainPageFragmentPresenterImpl(this, new MainPageFragmentInteractorImpl());
         return view;
@@ -51,11 +51,6 @@ public class MainPageFragment extends Fragment implements MainPageFragmentView {
     public void onDestroy() {
         super.onDestroy();
         presenter.onDestroy();
-    }
-
-    @Override
-    public void setupTextView(String text) {
-        textView.setText(text);
     }
 
     @Override
