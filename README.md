@@ -5,7 +5,7 @@
 3) editor for sound(crop, load).
 4) tabs on bottom: main, created, favorites, editor. **\***
 5) smart loading images and sounds.
-6) redesign application.
+6) redesign application.**\***
 7) search by: label, sound.
 8) `play sound sequence?`
 9) settings: change background of the application screens, grid size(min: 3, max: 5), version, about dev team.
