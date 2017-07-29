@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Bentch beta</string>
+    <string name="coming_soon">Coming soon\n...</string>
 
     <!--Main Page Fragment-->
     <string name="no_items_in_recycler_view">Oops!\nempty</string>
+
+    <!--TabLayout-->
+    <string name="main_page">Main</string>
+    <string name="favorites_page">Favorites</string>
+    <string name="created_page">Created</string>
+    <string name="editor_page">Editor</string>
 </resources>

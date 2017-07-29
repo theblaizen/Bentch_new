@@ -2,6 +2,7 @@ package com.owdienko.jaroslaw.bentch_new.Model.Entities;
 
 import android.media.SoundPool;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -12,6 +13,10 @@ import java.util.Map;
 
 public class SoundEntity {
     private List<Integer> soundPool;
+
+    public SoundEntity() {
+        soundPool = new ArrayList<>();
+    }
 
     public SoundEntity(List<Integer> soundPool) {
         this.soundPool = soundPool;

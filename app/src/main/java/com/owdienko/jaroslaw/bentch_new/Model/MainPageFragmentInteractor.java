@@ -9,13 +9,10 @@ import com.owdienko.jaroslaw.bentch_new.Model.Entities.SoundEntity;
  */
 
 public interface MainPageFragmentInteractor {
-    void setText(OnFinishedListener listener);
 
     void loadResources(OnFinishedListener listener);
 
     interface OnFinishedListener {
-        void onFinished(String item);
-
         void onLoadResources(ImageEntity imageEntity, SoundEntity soundEntity);
     }
 }

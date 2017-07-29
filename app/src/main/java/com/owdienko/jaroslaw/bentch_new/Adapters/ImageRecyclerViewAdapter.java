@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,13 +29,16 @@ import com.owdienko.jaroslaw.bentch_new.R;
  */
 public class ImageRecyclerViewAdapter extends RecyclerView.Adapter<ImageRecyclerViewAdapter.ViewHolder> implements RecyclerViewResources {
 
-    private Context context;
+    private static final String TAG = ImageRecyclerViewAdapter.class.getSimpleName();
     private ImageEntity mImagesEntity;
     private SoundEntity mSoundsEntity;
+    private Context context;
     private MediaPlayer mPlayer;
 
     public ImageRecyclerViewAdapter(Context context) {
         this.context = context;
+        this.mSoundsEntity = new SoundEntity();
+        this.mImagesEntity = new ImageEntity();
     }
 
     @Override
@@ -54,7 +58,7 @@ public class ImageRecyclerViewAdapter extends RecyclerView.Adapter<ImageRecycler
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mSoundsEntity.getSoundPool().size();
     }
 
     @Override

@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/noItemsInList"
+        android:id="@+id/mainFragmentNoItemsInList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="8dp"
@@ -13,6 +13,7 @@
         android:textColor="@color/colorBlackAlpha"
         android:textSize="26sp"
         android:textStyle="bold"
+        android:visibility="gone"
         android:textAlignment="center"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +38,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/recyclerView" />
+        android:id="@+id/mainFragmentRecyclerView" />
 
     <ProgressBar
         android:id="@+id/mainFragmentProgressBar"

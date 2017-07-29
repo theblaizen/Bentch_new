@@ -1,5 +1,6 @@
 package com.owdienko.jaroslaw.bentch_new.Model.Entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,6 +10,11 @@ import java.util.List;
 
 public class ImageEntity {
     private List<Integer> images;
+
+
+    public ImageEntity() {
+        images = new ArrayList<>();
+    }
 
     public ImageEntity(List<Integer> images) {
         this.images = images;

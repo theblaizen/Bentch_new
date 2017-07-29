@@ -71,14 +71,15 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
     public void setupViewPager() {
         adapter = new TabsViewPagerAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(new MainPageFragment(), "Main");
-        adapter.addFragment(new FavoritesPageFragment(), "Favorites");
-        adapter.addFragment(new CreatedPageFragment(), "Created");
-        adapter.addFragment(new EditPageFragment(), "Editor");
+        adapter.addFragment(new MainPageFragment(), getString(R.string.main_page));
+        adapter.addFragment(new FavoritesPageFragment(), getString(R.string.favorites_page));
+        adapter.addFragment(new CreatedPageFragment(), getString(R.string.created_page));
+        adapter.addFragment(new EditPageFragment(), getString(R.string.editor_page));
 
         viewPager.setAdapter(adapter);
-//        viewPager.setOffscreenPageLimit(4);
         tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.addOnTabSelectedListener(setupListenerForTabs());
     }
 
     @Override
@@ -89,5 +90,46 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return super.onOptionsItemSelected(item);
+    }
+
+    private TabLayout.OnTabSelectedListener setupListenerForTabs() {
+        return new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+                    case 0:
+                        if (getSupportActionBar() != null) {
+                            getSupportActionBar().setTitle(R.string.app_name);
+                        }
+                        break;
+                    case 1:
+                        if (getSupportActionBar() != null) {
+                            getSupportActionBar().setTitle(R.string.favorites_page);
+                        }
+                        break;
+                    case 2:
+                        if (getSupportActionBar() != null) {
+                            getSupportActionBar().setTitle(R.string.created_page);
+                        }
+                        break;
+                    case 3:
+                        if (getSupportActionBar() != null) {
+                            getSupportActionBar().setTitle(R.string.editor_page);
+                        }
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        };
+
     }
 }
