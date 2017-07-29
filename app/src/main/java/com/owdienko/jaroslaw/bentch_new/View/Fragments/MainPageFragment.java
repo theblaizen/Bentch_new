@@ -34,8 +34,8 @@ public class MainPageFragment extends Fragment implements MainPageFragmentView {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_page, container, false);
 
-        progressBar = view.findViewById(R.id.mainFragmentProgressBar);
-        textView = view.findViewById(R.id.noItemsInList);
+        progressBar = (ProgressBar)view.findViewById(R.id.mainFragmentProgressBar);
+        textView = (TextView)view.findViewById(R.id.noItemsInList);
 
         presenter = new MainPageFragmentPresenterImpl(this, new MainPageFragmentInteractorImpl());
         return view;

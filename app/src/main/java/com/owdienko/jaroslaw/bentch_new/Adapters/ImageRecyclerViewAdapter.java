@@ -78,9 +78,9 @@ public class ImageRecyclerViewAdapter extends RecyclerView.Adapter<ImageRecycler
         public ViewHolder(View rootView) {
             super(rootView);
 
-            mProgressBar = rootView.findViewById(R.id.sound_progress);
-            mImage = rootView.findViewById(R.id.img_of_sound_button);
-            mSoundName = rootView.findViewById(R.id.sound_name);
+            mProgressBar = (ProgressBar)rootView.findViewById(R.id.sound_progress);
+            mImage = (ImageView)rootView.findViewById(R.id.img_of_sound_button);
+            mSoundName = (TextView)rootView.findViewById(R.id.sound_name);
 
         }
 
