@@ -1,7 +1,5 @@
 package com.owdienko.jaroslaw.bentch_new.Presenter;
 
-import android.util.Log;
-
 import com.owdienko.jaroslaw.bentch_new.Adapters.ImageRecyclerViewAdapter;
 import com.owdienko.jaroslaw.bentch_new.Adapters.RecyclerViewResources;
 import com.owdienko.jaroslaw.bentch_new.Model.Entities.ImageEntity;
@@ -29,9 +27,10 @@ public class MainPageFragmentPresenterImpl implements MainPageFragmentPresenter,
     }
 
     @Override
-    public void onLoadResources(ImageEntity imageEntity, SoundEntity soundEntity) {
+    public void onLoadResources(ImageEntity imageEntity, SoundEntity soundEntity, int arrayOfSoundNames) {
         adapterView.setImages(imageEntity);
         adapterView.setSounds(soundEntity);
+        adapterView.setSoundNames(arrayOfSoundNames);
 
         //need to be set by user in settings
         int spanCount = 3;

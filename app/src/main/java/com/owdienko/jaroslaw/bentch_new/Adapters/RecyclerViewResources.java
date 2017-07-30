@@ -12,4 +12,6 @@ public interface RecyclerViewResources {
     void setImages(ImageEntity images);
 
     void setSounds(SoundEntity sounds);
+
+    void setSoundNames(int array);
 }

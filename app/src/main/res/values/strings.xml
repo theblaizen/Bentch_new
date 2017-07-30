@@ -10,4 +10,52 @@
     <string name="favorites_page">Favorites</string>
     <string name="created_page">Created</string>
     <string name="editor_page">Editor</string>
+
+    <!--Text for buttons-->
+    <string-array name="text_for_buttons">
+        <item>Bentch</item>
+        <item>Good boy</item>
+        <item>Shit</item>
+        <item>Wow shit</item>
+        <item>No nono</item>
+        <item>Shit is shit</item>
+        <item>Do not believe</item>
+        <item>What a twist</item>
+        <item>Simple math</item>
+        <item>Motherfucker</item>
+        <item>Come on</item>
+        <item>Ahah joke</item>
+        <item>Fork</item>
+        <item>Better story</item>
+        <item>Dark Lord</item>
+        <item>What a</item>
+        <item>Kill</item>
+        <item>Here\'s</item>
+        <item>I have time</item>
+        <item>Can\'t bear</item>
+        <item>Unless saved</item>
+        <item>Sweet boy</item>
+        <item>Joke</item>
+        <item>Bombs</item>
+        <item>Nice</item>
+        <item>Very nice</item>
+        <item>Very fun</item>
+        <item>So nice</item>
+        <item>Helplessness</item>
+        <item>Go mad</item>
+        <item>Story</item>
+        <item>Buy potato</item>
+        <item>Not truth</item>
+        <item>Unbelievable</item>
+        <item>Ethernet</item>
+        <item>Top secret</item>
+        <item>Strong claim</item>
+        <item>Of course no</item>
+        <item>OGS</item>
+        <item>Boast of</item>
+        <item>Understand</item>
+        <item>Situation</item>
+        <item>Good buy</item>
+        <item>Yeti</item>
+    </string-array>
 </resources>

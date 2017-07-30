@@ -13,6 +13,6 @@ public interface MainPageFragmentInteractor {
     void loadResources(OnFinishedListener listener);
 
     interface OnFinishedListener {
-        void onLoadResources(ImageEntity imageEntity, SoundEntity soundEntity);
+        void onLoadResources(ImageEntity imageEntity, SoundEntity soundEntity, int arrayOfSoundNames);
     }
 }

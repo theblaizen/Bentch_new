@@ -6,6 +6,7 @@ import com.owdienko.jaroslaw.bentch_new.Model.Entities.ImageEntity;
 import com.owdienko.jaroslaw.bentch_new.Model.Entities.ImageResources;
 import com.owdienko.jaroslaw.bentch_new.Model.Entities.SoundEntity;
 import com.owdienko.jaroslaw.bentch_new.Model.Entities.SoundResources;
+import com.owdienko.jaroslaw.bentch_new.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +24,9 @@ public class MainPageFragmentInteractorImpl implements MainPageFragmentInteracto
 //        new Handler().post(new Runnable() {
             @Override
             public void run() {
-                listener.onLoadResources(loadImages(), loadSounds());
+                listener.onLoadResources(loadImages(), loadSounds(), R.array.text_for_buttons);
             }
-        }, 800);
+        }, 700);
 //        });
     }
 
