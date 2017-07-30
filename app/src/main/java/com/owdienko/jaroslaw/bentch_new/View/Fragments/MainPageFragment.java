@@ -87,6 +87,5 @@ public class MainPageFragment extends Fragment implements MainPageFragmentView {
     public void setupRecyclerView(int spanCount, ImageRecyclerViewAdapter adapter) {
         mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), spanCount));
         mRecyclerView.setAdapter((ImageRecyclerViewAdapter) mAdapter);
-        mRecyclerView.setHasFixedSize(true);
     }
 }

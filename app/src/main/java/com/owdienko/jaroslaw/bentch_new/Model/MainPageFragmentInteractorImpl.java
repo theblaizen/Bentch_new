@@ -19,14 +19,14 @@ public class MainPageFragmentInteractorImpl implements MainPageFragmentInteracto
 
     @Override
     public void loadResources(final OnFinishedListener listener) {
-//        new Handler().postDelayed(new Runnable() {
-        new Handler().post(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
+//        new Handler().post(new Runnable() {
             @Override
             public void run() {
                 listener.onLoadResources(loadImages(), loadSounds());
             }
-//        }, 800);
-        });
+        }, 800);
+//        });
     }
 
     private SoundEntity loadSounds() {

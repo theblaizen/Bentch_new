@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +14,9 @@ import android.widget.TextView;
 import com.owdienko.jaroslaw.bentch_new.Model.Entities.ImageEntity;
 import com.owdienko.jaroslaw.bentch_new.Model.Entities.SoundEntity;
 import com.owdienko.jaroslaw.bentch_new.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Iaroslav Ovdienko on 17.07.17.
@@ -30,15 +32,15 @@ import com.owdienko.jaroslaw.bentch_new.R;
 public class ImageRecyclerViewAdapter extends RecyclerView.Adapter<ImageRecyclerViewAdapter.ViewHolder> implements RecyclerViewResources {
 
     private static final String TAG = ImageRecyclerViewAdapter.class.getSimpleName();
-    private ImageEntity mImagesEntity;
-    private SoundEntity mSoundsEntity;
+    private List<Integer> mImagesEntity;
+    private List<Integer> mSoundsEntity;
     private Context context;
     private MediaPlayer mPlayer;
 
     public ImageRecyclerViewAdapter(Context context) {
         this.context = context;
-        this.mSoundsEntity = new SoundEntity();
-        this.mImagesEntity = new ImageEntity();
+        this.mSoundsEntity = new ArrayList<>();
+        this.mImagesEntity = new ArrayList<>();
     }
 
     @Override
@@ -53,22 +55,23 @@ public class ImageRecyclerViewAdapter extends RecyclerView.Adapter<ImageRecycler
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         //TODO setup images, text, progressbar
-        holder.setButtonImage(context.getDrawable(mImagesEntity.getImages().get(position)));
+        holder.setButtonImage(context.getDrawable(mImagesEntity.get(position)));
     }
 
     @Override
     public int getItemCount() {
-        return mSoundsEntity.getSoundPool().size();
+        return mSoundsEntity.size();
     }
 
     @Override
     public void setImages(ImageEntity images) {
-        mImagesEntity = images;
+        mImagesEntity = images.getImages();
+
     }
 
     @Override
     public void setSounds(SoundEntity sounds) {
-        mSoundsEntity = sounds;
+        mSoundsEntity = sounds.getSoundPool();
     }
 
 
